@@ -1,7 +1,7 @@
 import cv2 
 import numpy as np
 import mediapipe as mp
-from models.weights.keypoint_classifier.keypoint_classifier import KeyPointClassifier
+from src.keypoint_classifier import KeyPointClassifier
 import itertools
 import copy
 import csv

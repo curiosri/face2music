@@ -1,5 +1,5 @@
 import mediapipe as mp
-from models.weights.keypoint_classifier.keypoint_classifier import KeyPointClassifier
+from src.keypoint_classifier import KeyPointClassifier
 from utils import utils
 import cv2
 

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from utils import utils
 from utils.facemesh import FaceMeshModel
-from models.weights.keypoint_classifier.keypoint_classifier import KeyPointClassifier
+from src.keypoint_classifier import KeyPointClassifier
 
 
 def main():

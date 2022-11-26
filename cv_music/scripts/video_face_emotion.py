@@ -7,7 +7,7 @@ import itertools
 import cv2 as cv
 import numpy as np
 import mediapipe as mp
-from weights.keypoint_classifier.keypoint_classifier import KeyPointClassifier
+from src.keypoint_classifier import KeyPointClassifier
 from utils import utils
 
 cap_device = 0
