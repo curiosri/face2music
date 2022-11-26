@@ -93,7 +93,7 @@ def load_keypointclassifier_labels(PATH : str) :
         
     return keypoint_classifier_labels
 
-def preprocess_image(image : cv2.Mat):
+def preprocess_image(image : cv2.Mat, bgr2rgb : bool = True):
     image = cv2.flip(image, 1)
     flipped_image = copy.deepcopy(image)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)

@@ -13,3 +13,15 @@ Below should run webcam and do the detection
 ```
 PYTHONPATH="." python main.py
 ```
+
+# run the api :
+
+```
+python -m uvicorn app:app --reload
+```
+
+# curl post request :
+
+```
+curl -F "image=@/home/eulermotors/hedwig/extras/face2music/cv_music/my_photo-1.jpg" http://127.0.0.1:8000/predict/image
+```
