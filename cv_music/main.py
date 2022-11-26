@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from utils import utils
-from utils.facemesh import FaceMeshModel
+from src.facemesh import FaceMeshModel
 from src.keypoint_classifier import KeyPointClassifier
 
 

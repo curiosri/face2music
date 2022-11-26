@@ -11,5 +11,5 @@ Some todos have been thinking of :
 # run the emotion detection script :
 Below should run webcam and do the detection
 ```
-PYTHONPATH="." python models/video_face_emotion.py 
+PYTHONPATH="." python main.py
 ```
