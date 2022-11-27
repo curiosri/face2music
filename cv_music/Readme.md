@@ -54,3 +54,8 @@ gcloud builds submit --tag gcr.io/cv-music-api/cv_music
 ```
 https://cv-music-gj2vogasoq-em.a.run.app
 ```
+
+for predicting image :
+```
+curl -F "image=@/home/something/hedwig/extras/face2music/cv_music/my_photo-1.jpg" https://cv-music-gj2vogasoq-em.a.run.app/predict/image
+```
