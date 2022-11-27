@@ -34,3 +34,13 @@ python -m uvicorn app:app --reload
 ```
 curl -F "image=@/home/frodo/hedwig/extras/face2music/cv_music/my_photo-1.jpg" http://127.0.0.1:8000/predict/image
 ```
+
+# docker build :
+
+```
+docker build -t cvmusic-api .
+```
+
+```
+docker run -dp 8000:8000 cvmusic-api
+```

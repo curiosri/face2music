@@ -43,4 +43,4 @@ async def predict_musicfromimage(image: bytes = File(...)):
         return {"Output": f"Some issue : {e}"}
 
 if __name__ == '__main__':
-    uvicorn.run(app,host="0.0.0.0",port=6000)
+    uvicorn.run(app,host="0.0.0.0",port=8000)
