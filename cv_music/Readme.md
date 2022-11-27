@@ -44,3 +44,13 @@ docker build -t cvmusic-api .
 ```
 docker run -dp 8000:8000 cvmusic-api
 ```
+
+# upload it to the GCP
+```
+gcloud builds submit --tag gcr.io/cv-music-api/cv_music
+```
+
+# GCP - public API = 
+```
+https://cv-music-gj2vogasoq-em.a.run.app
+```
