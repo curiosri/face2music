@@ -12,6 +12,10 @@ class FaceMeshModel(object):
             min_detection_confidence=min_detection_confidence,
             min_tracking_confidence=min_tracking_confidence
         ) 
+        
+        self.mp_drawing = mp.solutions.drawing_utils
+        self.mp_drawing_styles = mp.solutions.drawing_styles
+        
     
     def predict(self, image : cv2.Mat):
         result = self.face_mesh.process(image)
