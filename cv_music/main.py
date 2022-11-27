@@ -36,6 +36,30 @@ def main():
                     boundingbox[idx],
                     keypoint_classifier_labels[facial_emotion_id])
         
+        if results.multi_face_landmarks is not None:    
+            for face_landmarks in results.multi_face_landmarks:
+                facemeshmodel.mp_drawing.draw_landmarks(
+                        image=debug_image,
+                        landmark_list=face_landmarks,
+                        connections=facemeshmodel.mp_face_mesh.FACEMESH_TESSELATION,
+                        landmark_drawing_spec=None,
+                        connection_drawing_spec=facemeshmodel.mp_drawing_styles
+                        .get_default_face_mesh_tesselation_style())
+                facemeshmodel.mp_drawing.draw_landmarks(
+                    image=debug_image,
+                    landmark_list=face_landmarks,
+                    connections=facemeshmodel.mp_face_mesh.FACEMESH_CONTOURS,
+                    landmark_drawing_spec=None,
+                    connection_drawing_spec=facemeshmodel.mp_drawing_styles
+                    .get_default_face_mesh_contours_style())
+                facemeshmodel.mp_drawing.draw_landmarks(
+                    image=debug_image,
+                    landmark_list=face_landmarks,
+                    connections=facemeshmodel.mp_face_mesh.FACEMESH_IRISES,
+                    landmark_drawing_spec=None,
+                    connection_drawing_spec=facemeshmodel.mp_drawing_styles
+                    .get_default_face_mesh_iris_connections_style())    
+        
         cv2.imshow('Facial Emotion Recognition', debug_image)
 
     cap.release()
