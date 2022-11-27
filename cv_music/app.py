@@ -26,6 +26,7 @@ async def predict_musicfromimage(image: bytes = File(...)):
         image, debug_image = utils.preprocess_image(image)
         results = facemeshmodel.predict(image)
         processed_landmarks, boundingbox = facemeshmodel.process_landmarks(debug_image, results)
+        
         for idx, landmarks in enumerate(processed_landmarks):
             facial_emotion_id = keypoint_classifier(landmarks)
             debug_image = utils.draw_bounding_rect(True, debug_image, boundingbox[idx])
@@ -33,8 +34,7 @@ async def predict_musicfromimage(image: bytes = File(...)):
                     debug_image,
                     boundingbox[idx],
                     keypoint_classifier_labels[facial_emotion_id])
-
-
+            
         return {
             "Output" : boundingbox
         }        
